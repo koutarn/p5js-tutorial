@@ -4,16 +4,16 @@ const canvasColor = 'skyblue';
 
 ///only 1 call
 function setup() {
-  //$B%-%c%s%P%9$N:n@.(B
+  //キャンバスの作成
   createCanvas(canvasSizeY,canvasSizeY);
 
-  //$BGX7J?'$N@_Dj(B
+  //背景色の設定
   background(canvasColor);
 
-  //$BEI$j$D$V$7(B
+  //塗りつぶし
   fill('red');
 
-  //$B1o$N?'(B
+  //縁の色
   stroke('pink');
 
   circle(100,100,100);
@@ -25,23 +25,23 @@ function draw() {
   PushedMouse();
 }
 
-//$B%/%j%C%/$5$l$?$H$-$K<B9T(B
+//クリックされたときに実行
 function PushedMouse(){
-  console.log('$B%/%j%C%/$5$l$h(B');
+  console.log('クリックされよ');
 
-  //mouseButton$B$G$I$N%\%?%s$,2!$5$l$?$+$r=&$($k$C$]$$(B
+  //mouseButtonでどのボタンが押されたかを拾えるっぽい
   console.log(mouseButton);
 
   if (mouseButton === LEFT) {
-    console.log('$B:8%/%j%C%/(B');
+    console.log('左クリック');
 
-    //$B%^%&%9$N2U=j$K1_$rIA$/(B
+    //マウスの箇所に円を描く
     circle(mouseX,mouseY,10);
   }
 
   if (mouseButton === RIGHT) {
-    console.log('$B1&%/%j%C%/(B');
-    //$B%^%&%9$N2U=j$K1_$rIA$/(B
+    console.log('右クリック');
+    //マウスの箇所に円を描く
     square(mouseX,mouseY,30);
   }
 
